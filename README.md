@@ -17,8 +17,8 @@ It also includes buttons for clearing, deleting, and calculating percentages.
 
 ## Screenshot
 
-![Calculator Screenshot](<img width="1910" height="905" alt="image" src="https://github.com/user-attachments/assets/bde2d7f1-6b27-4dfd-92f3-9e540e284b56" />
-)
+
+<img width="1920" height="912" alt="Simple" src="https://github.com/user-attachments/assets/7594daaf-118d-4016-8e83-03ec1b05f3bc" />
 
 
 
