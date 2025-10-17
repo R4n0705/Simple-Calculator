@@ -1,0 +1,154 @@
+
+/* CSS Variables for consistent styling */
+:root{
+    --primary-color: #f3f3f3;
+    --secondary-color: #ff9500;
+    --third-color: #d4d4d2;
+    --font-family: 'Arial, sans-serif';
+    --font-size: 1rem;
+    --padding: 0.5rem 1rem;
+    --border-radius: 5px;
+}
+
+body{
+    background-color: #a9a5a5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: var(--third-color);
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.calculator{
+    max-width: 300px;
+    margin:50px auto 0 auto;
+    background-color: var(--third-color);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+
+.display{
+    padding: var(--padding);
+    font-family: var(--font-family);
+    text-align: right;
+    font-size: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    grid-auto-rows: minmax(3rem,auto);
+    box-sizing: border-box;
+
+
+
+}
+
+.btn{
+    padding: var(--padding);
+    font-family : var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+.btn_percent{
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.btn_percent:hover{
+    cursor: pointer;
+    background-color: #e68a00;
+}
+
+.btn_clear{
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.btn_clear:hover{
+    cursor: pointer;
+    background-color: #e68a00;
+}
+
+.btn_delete{
+    background-color:  var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.btn_operator{
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.btn_operator:hover{
+    cursor: pointer;
+    background-color: #e68a00;
+}
+
+.btn_equal{
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-column: span 2;
+    
+}
+
+.btn_equal:hover{
+    cursor: pointer;
+    background-color: #e68a00;
+    
+}
+
+
+
