@@ -1,9 +1,9 @@
 
 /* CSS Variables for consistent styling */
 :root{
-    --primary-color: #f3f3f3;
+    --primary-color: #e0e0e0;
     --secondary-color: #ff9500;
-    --third-color: #d4d4d2;
+    --third-color: #3b3b3b;
     --font-family: 'Arial, sans-serif';
     --font-size: 1rem;
     --padding: 0.5rem 1rem;
@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: #a9a5a5;
+    background-color: #e3e2e2;
     margin: 0;
     padding: 0;
 }
@@ -22,6 +22,7 @@ body{
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
+    color: #e0e0e0;
 
 }
 
@@ -71,7 +72,7 @@ body{
 
 .btn:hover{
     cursor: pointer;
-    background-color: #e0e0e0;
+    background-color: #cac8c8;
 }
 
 .btn_percent{
@@ -81,6 +82,7 @@ body{
     padding: var(--padding);
     border-radius: var(--border-radius);
     border: none;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
@@ -96,6 +98,7 @@ body{
     padding: var(--padding);
     border-radius: var(--border-radius);
     border: none;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
@@ -112,6 +115,7 @@ body{
     padding: var(--padding);
     border-radius: var(--border-radius);
     border: none;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
@@ -123,6 +127,7 @@ body{
     padding: var(--padding);
     border-radius: var(--border-radius);
     border: none;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
@@ -140,6 +145,7 @@ body{
     border-radius: var(--border-radius);
     border: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
     grid-column: span 2;
     
 }
