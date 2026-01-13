@@ -1,6 +1,5 @@
-
 /* CSS Variables for consistent styling */
-:root{
+:root {
     --primary-color: #e0e0e0;
     --secondary-color: #ff9500;
     --third-color: #3b3b3b;
@@ -10,151 +9,187 @@
     --border-radius: 5px;
 }
 
-body{
+/* Global Styles */
+body {
     background-color: #e3e2e2;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
 }
 
-.navbar{
+/* Navbar */
+.navbar {
     background-color: var(--third-color);
     text-align: center;
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
     color: #e0e0e0;
-
 }
 
-.calculator{
-    max-width: 300px;
-    margin:50px auto 0 auto;
+/* Calculator Container */
+.calculator {
+    max-width: 400px; /* bigger on desktop */
+    margin: 50px auto;
     background-color: var(--third-color);
     border-radius: var(--border-radius);
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   
+    box-sizing: border-box;
 }
 
-.display{
+/* Display */
+.display {
     padding: var(--padding);
     font-family: var(--font-family);
     text-align: right;
     font-size: 2rem;
     border-radius: var(--border-radius);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-  
+    word-wrap: break-word;
 }
 
+/* Buttons Grid */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
-    grid-auto-rows: minmax(3rem,auto);
+    grid-auto-rows: minmax(3rem, auto);
     box-sizing: border-box;
-
-
-
 }
 
-.btn{
+/* Common Button Styles */
+.btn,
+.btn_percent,
+.btn_clear,
+.btn_delete,
+.btn_operator,
+.btn_equal {
     padding: var(--padding);
-    font-family : var(--font-family);
+    font-family: var(--font-family);
     font-size: var(--font-size);
-    background-color: var(--primary-color);
     border-radius: var(--border-radius);
     border: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.btn:hover{
-    cursor: pointer;
+/* Regular Button */
+.btn {
+    background-color: var(--primary-color);
+}
+
+.btn:hover {
     background-color: #cac8c8;
 }
 
-.btn_percent{
+/* Operator Buttons */
+.btn_operator,
+.btn_percent,
+.btn_clear,
+.btn_delete,
+.btn_equal {
     background-color: var(--secondary-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: none;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
-.btn_percent:hover{
-    cursor: pointer;
+
+.btn_operator:hover,
+.btn_percent:hover,
+.btn_clear:hover,
+.btn_equal:hover {
     background-color: #e68a00;
 }
 
-.btn_clear{
-    background-color: var(--secondary-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: none;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-}
-
-.btn_clear:hover{
-    cursor: pointer;
-    background-color: #e68a00;
-}
-
-.btn_delete{
-    background-color:  var(--secondary-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: none;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-}
-
-.btn_operator{
-    background-color: var(--secondary-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: none;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-}
-
-.btn_operator:hover{
-    cursor: pointer;
-    background-color: #e68a00;
-}
-
-.btn_equal{
-    background-color: var(--secondary-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    color: white;
+/* Equal Button spans 2 columns */
+.btn_equal {
     grid-column: span 2;
-    
 }
 
-.btn_equal:hover{
-    cursor: pointer;
-    background-color: #e68a00;
-    
+/* Responsive Styles */
+@media (max-width: 480px) {
+    /* Mobile Devices */
+    .calculator {
+        max-width: 90%;
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    .display {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .buttons {
+        gap: 0.3rem;
+        grid-auto-rows: minmax(2.5rem, auto);
+    }
+
+    .btn,
+    .btn_operator,
+    .btn_equal,
+    .btn_percent,
+    .btn_clear,
+    .btn_delete {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Tablets */
+    .calculator {
+        max-width: 350px;
+        padding: 1.5rem;
+    }
 
+    .display {
+        font-size: 1.8rem;
+    }
 
+    .buttons {
+        gap: 0.4rem;
+        grid-auto-rows: minmax(2.8rem, auto);
+    }
+
+    .btn,
+    .btn_operator,
+    .btn_equal,
+    .btn_percent,
+    .btn_clear,
+    .btn_delete {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Desktops */
+    .calculator {
+        max-width: 400px;
+        padding: 2rem;
+    }
+
+    .display {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        gap: 0.5rem;
+        grid-auto-rows: minmax(3rem, auto);
+    }
+
+    .btn,
+    .btn_operator,
+    .btn_equal,
+    .btn_percent,
+    .btn_clear,
+    .btn_delete {
+        font-size: 1rem;
+        padding: var(--padding);
+    }
+}
